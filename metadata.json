@@ -1,0 +1,8 @@
+{
+  "name": "WEB PRIAMO PUBLICIDAD",
+  "description": "Experiencia web inmersiva 2026 de Priamo Publicidad. Producción publicitaria, impresión en gran formato Roland, stands, exhibiciones y soluciones de marca.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

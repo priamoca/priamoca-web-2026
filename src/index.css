@@ -1,0 +1,134 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-priamo-navy: #07182B;
+    --color-priamo-dark: #102744;
+    --color-priamo-neon: #21E45B;
+    --color-priamo-cyan: #00D2FF;
+    --color-priamo-magenta: #FF007A;
+    --color-priamo-yellow: #FFD200;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFFFF;
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html.dark {
+    background-color: #07090D;
+    color: #F5F7FA;
+  }
+}
+
+/* Custom scanline animation for the TV activation */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+/* Neon glow utilities */
+.neon-glow-green {
+  box-shadow: 0 0 25px rgba(33, 228, 91, 0.4), inset 0 0 15px rgba(33, 228, 91, 0.2);
+}
+
+.neon-text-glow {
+  text-shadow: none;
+}
+
+.dark .neon-text-glow {
+  text-shadow: 0 0 12px rgba(33, 228, 91, 0.6), 0 0 24px rgba(33, 228, 91, 0.3);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.4);
+}
+
+.neon-glow-magenta {
+  box-shadow: 0 0 25px rgba(255, 0, 122, 0.4);
+}
+
+/* Subtle grid background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #07090D;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1A365D;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #21E45B;
+}
+
+/* Progressive once-on-entry scroll reveal transitions (isolated on outer wrappers so inner hover transitions remain untouched) */
+.priamo-reveal {
+  opacity: 0;
+  transition-property: opacity, transform, clip-path;
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.priamo-reveal-up {
+  transform: translate3d(0, 22px, 0);
+}
+
+.priamo-reveal-scale {
+  transform: translate3d(0, 18px, 0) scale(0.972);
+}
+
+.priamo-reveal-clip {
+  transform: translate3d(0, 16px, 0);
+  clip-path: inset(0 0 12% 0);
+}
+
+.priamo-reveal-fade {
+  transform: none;
+}
+
+.priamo-reveal.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  clip-path: inset(0 0 0% 0);
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .priamo-reveal {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    transition: none;
+  }
+}

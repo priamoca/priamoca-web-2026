@@ -1,0 +1,22 @@
+{
+  "name": "PRIAMO PUBLICIDAD",
+  "short_name": "Priamo",
+  "description": "Producción publicitaria, impresión en gran formato Roland, stands, exhibiciones y soluciones de marca.",
+  "lang": "es",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#21E45B",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
