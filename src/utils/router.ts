@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-export type AppRoute = '/' | '/servicios' | '/contacto';
+export type AppRoute = '/' | '/servicios' | '/blog' | '/premios-y-trayectoria' | '/contacto';
 
 export interface RouteState {
   path: AppRoute;
@@ -16,6 +16,8 @@ function parseLocation(): RouteState {
   const rawPath = window.location.pathname.toLowerCase().replace(/\/+$/, '') || '/';
   let path: AppRoute = '/';
   if (rawPath === '/servicios') path = '/servicios';
+  else if (rawPath === '/blog') path = '/blog';
+  else if (rawPath === '/premios-y-trayectoria' || rawPath === '/premios') path = '/premios-y-trayectoria';
   else if (rawPath === '/contacto') path = '/contacto';
 
   const searchParams = new URLSearchParams(window.location.search);

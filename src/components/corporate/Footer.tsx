@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToTop, onNavigateSection
                 alt="Priamo Publicidad"
                 className="h-12 w-auto object-contain drop-shadow-[0_2px_8px_rgba(11,126,50,0.16)] dark:drop-shadow-[0_0_12px_rgba(33,228,91,0.4)]"
               />
-              <span className="text-xs font-mono font-bold tracking-wider text-[#0B7E32] dark:text-[#21E45B] block">
+              <span className="text-xs font-bold tracking-wider text-[#0B7E32] dark:text-[#21E45B] block">
                 #CreamosBuenaImpresión
               </span>
             </div>
@@ -33,6 +33,12 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToTop, onNavigateSection
               </button>
               <button onClick={() => onNavigateSection('servicios')} className="hover:text-[#0B7E32] dark:hover:text-[#21E45B] transition-colors cursor-pointer">
                 Servicios
+              </button>
+              <button onClick={() => onNavigateSection('blog')} className="hover:text-[#0B7E32] dark:hover:text-[#21E45B] transition-colors cursor-pointer">
+                Blog
+              </button>
+              <button onClick={() => onNavigateSection('premios-y-trayectoria')} className="hover:text-[#0B7E32] dark:hover:text-[#21E45B] transition-colors cursor-pointer">
+                Premios y Trayectoria
               </button>
               <button onClick={() => onNavigateSection('nosotros')} className="hover:text-[#0B7E32] dark:hover:text-[#21E45B] transition-colors cursor-pointer">
                 Nosotros
@@ -48,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToTop, onNavigateSection
             {/* Back to top */}
             <button
               onClick={onScrollToTop}
-              className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-700 dark:text-neutral-300 hover:text-[#0B7E32] dark:hover:text-[#21E45B] transition-colors p-2 rounded-lg bg-white dark:bg-white/5 hover:bg-neutral-50 dark:hover:bg-white/10 border border-neutral-200 dark:border-white/10 shadow-xs dark:shadow-none cursor-pointer"
+              className="flex items-center gap-2 text-xs tracking-wider uppercase text-neutral-700 dark:text-neutral-300 hover:text-[#0B7E32] dark:hover:text-[#21E45B] transition-colors p-2 rounded-lg bg-white dark:bg-white/5 hover:bg-neutral-50 dark:hover:bg-white/10 border border-neutral-200 dark:border-white/10 shadow-xs dark:shadow-none cursor-pointer"
             >
               <span>Volver al Inicio</span>
               <ArrowUp className="w-4 h-4 text-[#0B7E32] dark:text-[#21E45B]" />
@@ -58,7 +64,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToTop, onNavigateSection
 
         {/* Legal and RIF */}
         <ScrollReveal variant="fade" threshold={0.05} delay={90}>
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-neutral-500">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
             <div>
               © 2026 {COMPANY_INFO.name} · RIF {COMPANY_INFO.rif}. Todos los derechos reservados.
             </div>

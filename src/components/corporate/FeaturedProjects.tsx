@@ -76,12 +76,12 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
         {/* Section Title Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <ScrollReveal variant="clip" delay={0}>
-            <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-[#0B7E32] dark:text-[#21E45B] uppercase mb-2">
+            <div className="flex items-center gap-2 text-xs tracking-widest text-[#0B7E32] dark:text-[#21E45B] uppercase mb-2">
               <span>PORTAFOLIO SELECCIONADO</span>
               <span>·</span>
               <span>REGISTRO REAL</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#0F172A] dark:text-white uppercase leading-none">
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#262D38] dark:text-white uppercase leading-none">
               DE LA IMAGEN <br />
               <span className="text-[#0B7E32] dark:text-[#21E45B] neon-text-glow">AL ESPACIO COMPLETO</span>
             </h2>
@@ -102,8 +102,8 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-4 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap focus:outline-none cursor-pointer ${
                   activeCategory === cat.id
-                    ? 'bg-[#21E45B] text-[#07090D] shadow-[0_4px_14px_rgba(33,228,91,0.28)] dark:shadow-[0_0_15px_rgba(33,228,91,0.3)]'
-                    : 'bg-neutral-100 dark:bg-white/5 text-neutral-600 dark:text-neutral-400 hover:text-[#0F172A] dark:hover:text-white hover:bg-neutral-200/70 dark:hover:bg-white/10 border border-neutral-200 dark:border-white/5'
+                    ? 'bg-[#21E45B] text-[#262D38] shadow-[0_4px_14px_rgba(33,228,91,0.28)] dark:shadow-[0_0_15px_rgba(33,228,91,0.3)]'
+                    : 'bg-neutral-100 dark:bg-white/5 text-neutral-600 dark:text-neutral-400 hover:text-[#262D38] dark:hover:text-white hover:bg-neutral-200/70 dark:hover:bg-white/10 border border-neutral-200 dark:border-white/5'
                 }`}
               >
                 {cat.label}
@@ -138,10 +138,10 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
 
                   {/* Top Badges */}
                   <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2 pointer-events-none">
-                    <span className="px-2.5 py-1 rounded bg-white/90 dark:bg-[#07090D]/80 backdrop-blur-md border border-neutral-200 dark:border-white/10 text-[10px] font-mono tracking-wider uppercase text-[#0F172A] dark:text-neutral-300">
+                    <span className="px-2.5 py-1 rounded bg-white/90 dark:bg-[#07090D]/80 backdrop-blur-md border border-neutral-200 dark:border-white/10 text-[10px] tracking-wider uppercase text-[#262D38] dark:text-neutral-300">
                       {project.client}
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-[#ECFDF3]/95 dark:bg-[#21E45B]/20 backdrop-blur-md border border-[#0B7E32]/35 dark:border-[#21E45B]/40 text-[10px] font-mono tracking-wider uppercase text-[#0B7E32] dark:text-[#21E45B] font-bold">
+                    <span className="px-2.5 py-1 rounded bg-[#ECFDF3]/95 dark:bg-[#21E45B]/20 backdrop-blur-md border border-[#0B7E32]/35 dark:border-[#21E45B]/40 text-[10px] tracking-wider uppercase text-[#0B7E32] dark:text-[#21E45B] font-bold">
                       {project.badge}
                     </span>
                   </div>
@@ -151,7 +151,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                     <button
                       type="button"
                       onClick={() => handleOpenProject(project)}
-                      className="px-4 py-2 rounded-lg bg-[#21E45B] text-[#07090D] font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-xl hover:scale-105 transition-transform cursor-pointer"
+                      className="px-4 py-2 rounded-lg bg-[#21E45B] text-[#262D38] font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-xl hover:scale-105 transition-transform cursor-pointer"
                     >
                       <Eye className="w-4 h-4" />
                       <span>Ver Ficha Técnica</span>
@@ -162,10 +162,10 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                 {/* Content Details */}
                 <div className="p-6 flex flex-col justify-between flex-1">
                   <div>
-                    <span className="text-[11px] font-mono text-[#0284C7] dark:text-[#00D2FF] uppercase tracking-wider block mb-1">
+                    <span className="text-[11px] text-[#0284C7] dark:text-[#00D2FF] uppercase tracking-wider block mb-1">
                       {project.category} · {project.year}
                     </span>
-                    <h3 className="text-xl font-bold text-[#0F172A] dark:text-white group-hover:text-[#0B7E32] dark:group-hover:text-[#21E45B] transition-colors mb-2">
+                    <h3 className="text-xl font-bold text-[#262D38] dark:text-white group-hover:text-[#0B7E32] dark:group-hover:text-[#21E45B] transition-colors mb-2">
                       {project.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2 leading-relaxed">
@@ -181,7 +181,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                     <button
                       type="button"
                       onClick={() => onSelectProjectForQuote(project.title)}
-                      className="p-2 rounded-lg bg-neutral-100 dark:bg-white/5 hover:bg-[#21E45B] hover:text-[#07090D] text-neutral-700 dark:text-neutral-300 transition-colors cursor-pointer"
+                      className="p-2 rounded-lg bg-neutral-100 dark:bg-white/5 hover:bg-[#21E45B] hover:text-[#262D38] text-neutral-700 dark:text-neutral-300 transition-colors cursor-pointer"
                       title="Cotizar solución similar"
                     >
                       <ArrowUpRight className="w-4 h-4" />
@@ -213,7 +213,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
               {/* Modal Header with Always-Visible Accessible X Button in top-right */}
               <div className="flex items-center justify-between gap-3 px-4 py-2.5 sm:px-5 sm:py-3 border-b border-neutral-200 dark:border-white/10 bg-[#F8FAFC] dark:bg-[#07090D] shrink-0">
                 <div className="flex items-center gap-2 min-w-0">
-                  <span className="text-xs font-mono text-[#0B7E32] dark:text-[#21E45B] uppercase font-bold truncate">
+                  <span className="text-xs text-[#0B7E32] dark:text-[#21E45B] uppercase font-bold truncate">
                     {selectedProject.client}
                   </span>
                   <span className="text-neutral-400 dark:text-neutral-500 shrink-0">·</span>
@@ -225,7 +225,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                   ref={closeButtonRef}
                   type="button"
                   onClick={handleCloseModal}
-                  className="shrink-0 flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-neutral-100 dark:bg-white/15 hover:bg-[#21E45B] text-[#0F172A] dark:text-white hover:text-[#07090D] border border-neutral-300 dark:border-white/25 hover:border-[#21E45B] transition-all shadow-sm dark:shadow-md focus:outline-none focus:ring-2 focus:ring-[#21E45B] cursor-pointer"
+                  className="shrink-0 flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-neutral-100 dark:bg-white/15 hover:bg-[#21E45B] text-[#262D38] dark:text-white hover:text-[#262D38] border border-neutral-300 dark:border-white/25 hover:border-[#21E45B] transition-all shadow-sm dark:shadow-md focus:outline-none focus:ring-2 focus:ring-[#21E45B] cursor-pointer"
                   aria-label="Cerrar ficha técnica (Escape)"
                   title="Cerrar (Escape)"
                 >
@@ -246,10 +246,10 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
 
                 <div className="flex flex-col gap-2.5">
                   <div>
-                    <span className="text-[11px] font-mono text-[#0284C7] dark:text-[#00D2FF] uppercase tracking-wider block mb-0.5">
+                    <span className="text-[11px] text-[#0284C7] dark:text-[#00D2FF] uppercase tracking-wider block mb-0.5">
                       {selectedProject.category}
                     </span>
-                    <h3 id="modal-project-title" className="text-lg sm:text-xl font-bold text-[#0F172A] dark:text-white leading-snug mb-1">
+                    <h3 id="modal-project-title" className="text-lg sm:text-xl font-bold text-[#262D38] dark:text-white leading-snug mb-1">
                       {selectedProject.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-snug">
@@ -258,8 +258,8 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                   </div>
 
                   {/* Impact Statement */}
-                  <div className="p-2.5 sm:p-3 rounded-lg bg-[#F0FDF4] dark:bg-[#102744]/60 border border-[#0B7E32]/20 dark:border-[#21E45B]/20 text-xs text-neutral-800 dark:text-neutral-200 leading-snug">
-                    <strong className="text-[#0B7E32] dark:text-[#21E45B] font-mono uppercase block mb-0.5 text-[11px]">
+                  <div className="p-2.5 sm:p-3 rounded-lg bg-[#F0FDF4] dark:bg-[#102744]/60 border border-[#0B7E32]/20 dark:border-[#21E45B]/20 text-xs text-[#262D38] dark:text-neutral-200 leading-snug">
+                    <strong className="text-[#0B7E32] dark:text-[#21E45B] uppercase block mb-0.5 text-[11px]">
                       Resultado & Impacto:
                     </strong>
                     {selectedProject.impact}
@@ -267,7 +267,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
 
                   {/* Technical Specs List */}
                   <div>
-                    <h4 className="text-[11px] font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-1.5">
+                    <h4 className="text-[11px] text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-1.5">
                       Especificaciones y Materiales Técnicos:
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
@@ -291,7 +291,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                   <button
                     type="button"
                     onClick={handleCloseModal}
-                    className="px-3.5 py-2 rounded-lg border border-neutral-300 dark:border-white/20 text-xs uppercase font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#0F172A] dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors cursor-pointer"
+                    className="px-3.5 py-2 rounded-lg border border-neutral-300 dark:border-white/20 text-xs uppercase font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#262D38] dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors cursor-pointer"
                   >
                     Cerrar
                   </button>
@@ -302,7 +302,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                       handleCloseModal();
                       onSelectProjectForQuote(title);
                     }}
-                    className="px-4 py-2 rounded-lg bg-[#21E45B] text-[#07090D] font-bold text-xs uppercase tracking-wider hover:bg-[#1ED153] dark:hover:bg-[#2bf56b] transition-colors cursor-pointer flex-1 sm:flex-initial text-center"
+                    className="px-4 py-2 rounded-lg bg-[#21E45B] text-[#262D38] font-bold text-xs uppercase tracking-wider hover:bg-[#1ED153] dark:hover:bg-[#2bf56b] transition-colors cursor-pointer flex-1 sm:flex-initial text-center"
                   >
                     Solicitar Cotización
                   </button>

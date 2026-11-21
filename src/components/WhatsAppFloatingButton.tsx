@@ -22,7 +22,7 @@ export const WhatsAppFloatingButton: React.FC<WhatsAppFloatingButtonProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar a Priamo Publicidad por WhatsApp (+58 412-6026814)"
-        className="group relative flex items-center gap-2.5 px-3.5 py-3 rounded-full bg-[#25D366] text-[#07090D] font-bold text-xs shadow-[0_4px_22px_rgba(37,211,102,0.45)] hover:shadow-[0_6px_30px_rgba(37,211,102,0.7)] hover:bg-[#22bf5b] hover:scale-105 active:scale-95 transition-all select-none"
+        className="group relative flex items-center gap-2.5 px-3.5 py-3 rounded-full bg-[#25D366] text-[#262D38] font-bold text-xs shadow-[0_4px_22px_rgba(37,211,102,0.45)] hover:shadow-[0_6px_30px_rgba(37,211,102,0.7)] hover:bg-[#22bf5b] hover:scale-105 active:scale-95 transition-all select-none"
       >
         {/* Pulsing beacon behind icon */}
         <span className="absolute -inset-0.5 rounded-full bg-[#25D366] opacity-40 animate-ping pointer-events-none group-hover:opacity-0" />
@@ -37,7 +37,7 @@ export const WhatsAppFloatingButton: React.FC<WhatsAppFloatingButtonProps> = ({
         </svg>
 
         {/* Action text */}
-        <span className="hidden sm:inline-block tracking-wider uppercase text-[11px] font-black text-[#07090D]">
+        <span className="hidden sm:inline-block tracking-wider uppercase text-[11px] font-black text-[#262D38]">
           WhatsApp
         </span>
       </a>

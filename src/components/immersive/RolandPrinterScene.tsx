@@ -90,7 +90,7 @@ export const RolandPrinterScene: React.FC<RolandPrinterSceneProps> = ({
             <div className="w-56 h-36 bg-gradient-to-b from-[#2A2E35] to-[#12151B] rounded-md border border-white/20 shadow-2xl relative flex flex-col justify-between p-3">
               {/* Roland Logo & Status */}
               <div className="flex items-center justify-between border-b border-white/10 pb-1.5">
-                <span className="font-mono text-[10px] tracking-widest text-[#00D2FF] font-bold">
+                <span className="text-[10px] tracking-widest text-[#00D2FF] font-bold">
                   Roland TrueVIS VG3
                 </span>
                 <span className="w-2 h-2 rounded-full bg-[#21E45B] shadow-[0_0_8px_#21E45B]" />
@@ -101,15 +101,15 @@ export const RolandPrinterScene: React.FC<RolandPrinterSceneProps> = ({
                 {['#00D2FF', '#FF007A', '#FFD200', '#07090D', '#FF6B00', '#21E45B'].map((color, i) => (
                   <div key={i} className="flex flex-col items-center gap-0.5">
                     <div className="w-2 h-4 rounded-full border border-white/20" style={{ backgroundColor: color }} />
-                    <span className="text-[7px] font-mono text-neutral-400">CH{i + 1}</span>
+                    <span className="text-[7px] text-neutral-400">CH{i + 1}</span>
                   </div>
                 ))}
               </div>
 
               {/* Optical Rail & UV LED Curing Light Beam */}
               <div className="flex items-center justify-between pt-1 border-t border-white/10">
-                <div className="text-[8px] font-mono text-neutral-400">PRECISION HEAD · 1440 DPI</div>
-                <div className="text-[8px] font-mono text-[#21E45B] animate-pulse">ACTIVE PRINT</div>
+                <div className="text-[8px] text-neutral-400">PRECISION HEAD · 1440 DPI</div>
+                <div className="text-[8px] text-[#21E45B] animate-pulse">ACTIVE PRINT</div>
               </div>
 
               {/* UV Curing Light emitting from bottom */}
@@ -139,7 +139,7 @@ export const RolandPrinterScene: React.FC<RolandPrinterSceneProps> = ({
               }}
             >
               <div className="w-full h-full bg-gradient-to-b from-[#181C22] to-[#0D1016] border-x border-b border-white/20 shadow-xl p-3 flex flex-col justify-end">
-                <div className="text-[11px] font-mono text-neutral-300 flex items-center justify-between">
+                <div className="text-[11px] text-neutral-300 flex items-center justify-between">
                   <span className="text-[#21E45B] font-bold">#CREAMOSBUENAIMPRESIÓN</span>
                   <span className="text-[9px] text-neutral-500">ROLAND HIGH DEF</span>
                 </div>
@@ -152,7 +152,7 @@ export const RolandPrinterScene: React.FC<RolandPrinterSceneProps> = ({
       {/* SCENE 09: CINEMATIC FINALE OVERLAY (Progress 0.91 to 1.00) */}
       {finaleProgress > 0.05 && (
         <div
-          className="absolute inset-0 z-30 flex flex-col items-center justify-center p-6 bg-white/95 dark:bg-[#07090D]/95 backdrop-blur-md transition-all duration-300"
+          className="absolute inset-0 z-30 flex flex-col items-center justify-center p-4 sm:p-6 lg:px-8 bg-white/95 dark:bg-[#07090D]/95 backdrop-blur-md transition-all duration-300"
           style={{ opacity: finaleProgress }}
         >
           {/* Priamito Character Host in Finale — tucked minimally down so cut legs hide cleanly behind Universo Priamo 2026 */}
@@ -174,7 +174,7 @@ export const RolandPrinterScene: React.FC<RolandPrinterSceneProps> = ({
           </div>
 
           {/* Slogan and Call to Action Typography (kept strictly in front of Priamito) */}
-          <div className="relative z-20 text-center max-w-2xl mx-auto flex flex-col items-center">
+          <div className="relative z-20 text-center w-full max-w-6xl mx-auto flex flex-col items-center">
             {/* Tagline */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#ECFDF3] dark:bg-[#091811] border border-[#0B7E32]/30 dark:border-[#21E45B]/30 text-[#0B7E32] dark:text-[#21E45B] text-xs font-bold tracking-widest uppercase mb-3 shadow-md dark:shadow-[0_4px_16px_rgba(7,9,13,0.9)]">
               <Sparkles className="w-3.5 h-3.5" />
@@ -182,12 +182,13 @@ export const RolandPrinterScene: React.FC<RolandPrinterSceneProps> = ({
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-[#0F172A] dark:text-white uppercase leading-none drop-shadow-sm dark:drop-shadow-lg">
-              CREAMOS <span className="text-[#0B7E32] dark:text-[#21E45B] neon-text-glow">BUENA IMPRESIÓN</span>
+            <h2 className="w-full text-[clamp(1.18rem,5.4vw,4.55rem)] font-black tracking-tight text-[#262D38] dark:text-white uppercase leading-[1.06] drop-shadow-sm dark:drop-shadow-lg">
+              <span className="block whitespace-nowrap">IMPRESIONES DIGITALES</span>
+              <span className="block whitespace-nowrap text-[#0B7E32] dark:text-[#21E45B] neon-text-glow">DE GRAN FORMATO</span>
             </h2>
 
             {/* Subtitle */}
-            <p className="mt-3 sm:mt-4 text-base sm:text-xl text-neutral-700 dark:text-neutral-300 font-medium">
+            <p className="mt-3 sm:mt-4 text-base sm:text-xl text-neutral-700 dark:text-neutral-300 font-medium max-w-2xl">
               ¿Qué proyecto tienes en mente?
             </p>
 
@@ -200,7 +201,7 @@ export const RolandPrinterScene: React.FC<RolandPrinterSceneProps> = ({
               <button
                 type="button"
                 onClick={onExploreProjects}
-                className="w-full sm:w-auto px-7 py-3.5 rounded-lg font-bold text-sm uppercase tracking-wider bg-neutral-100 hover:bg-neutral-200 dark:bg-white/10 dark:hover:bg-white/20 text-[#0F172A] dark:text-white border border-neutral-300 dark:border-white/20 dark:hover:border-white/40 transition-all flex items-center justify-center gap-2 shadow-sm dark:shadow-lg hover:shadow-md dark:hover:shadow-xl outline-none focus:outline-none focus:ring-0 focus-visible:outline-none active:outline-none select-none [-webkit-tap-highlight-color:transparent] cursor-pointer"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-lg font-bold text-sm uppercase tracking-wider bg-neutral-100 hover:bg-neutral-200 dark:bg-white/10 dark:hover:bg-white/20 text-[#262D38] dark:text-white border border-neutral-300 dark:border-white/20 dark:hover:border-white/40 transition-all flex items-center justify-center gap-2 shadow-sm dark:shadow-lg hover:shadow-md dark:hover:shadow-xl outline-none focus:outline-none focus:ring-0 focus-visible:outline-none active:outline-none select-none [-webkit-tap-highlight-color:transparent] cursor-pointer"
               >
                 <span>Explorar Proyectos</span>
                 <ChevronDown className="w-4 h-4 text-[#0B7E32] dark:text-[#21E45B]" />
@@ -209,7 +210,7 @@ export const RolandPrinterScene: React.FC<RolandPrinterSceneProps> = ({
               <button
                 type="button"
                 onClick={onRequestQuote}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-lg font-black text-sm uppercase tracking-wider bg-[#21E45B] text-[#07090D] hover:bg-[#1ED153] dark:hover:bg-[#2bf56b] shadow-[0_6px_20px_rgba(33,228,91,0.3)] dark:shadow-[0_0_25px_rgba(33,228,91,0.4)] hover:shadow-[0_0_35px_rgba(33,228,91,0.6)] transition-all flex items-center justify-center gap-2 outline-none focus:outline-none focus:ring-0 focus-visible:outline-none active:outline-none select-none [-webkit-tap-highlight-color:transparent] cursor-pointer"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-lg font-black text-sm uppercase tracking-wider bg-[#21E45B] text-[#262D38] hover:bg-[#1ED153] dark:hover:bg-[#2bf56b] shadow-[0_6px_20px_rgba(33,228,91,0.3)] dark:shadow-[0_0_25px_rgba(33,228,91,0.4)] hover:shadow-[0_0_35px_rgba(33,228,91,0.6)] transition-all flex items-center justify-center gap-2 outline-none focus:outline-none focus:ring-0 focus-visible:outline-none active:outline-none select-none [-webkit-tap-highlight-color:transparent] cursor-pointer"
               >
                 <span>Solicitar Cotización</span>
                 <ArrowRight className="w-4 h-4" />

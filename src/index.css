@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
 @layer base {
   :root {
     --color-priamo-navy: #07182B;
@@ -14,7 +19,7 @@
   html {
     scroll-behavior: smooth;
     background-color: #FFFFFF;
-    color: #0F172A;
+    color: #262D38;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
 
@@ -131,4 +136,33 @@
     clip-path: none;
     transition: none;
   }
+}
+
+/* Continuous dual-direction brand marquee ribbons (smooth, non-pausing endless loop) */
+@keyframes priamo-marquee-ltr {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes priamo-marquee-rtl {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-priamo-marquee-ltr {
+  animation: priamo-marquee-ltr 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-priamo-marquee-rtl {
+  animation: priamo-marquee-rtl 40s linear infinite;
+  will-change: transform;
 }

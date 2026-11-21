@@ -46,27 +46,46 @@ export const ImmersiveExperience: React.FC<ImmersiveExperienceProps> = ({
   const AUTO_SCROLL_SPEED = 324;
 
   // C1-smooth scroll-time bijection:
-  // Extends ONLY the back-floating tunnel travel tramo (20%..64%) by ~12.9% duration (within 10%-15% target)
-  // while preserving identical pixel speed & duration for 0%..20% and 64%..100% and keeping every animation 100% synced.
+  // 1) Back-floating bridge travel tramo (20%..64%) keeps +12.9% duration slowdown
+  // 2) El Ávila + front-facing Priamito tramo (64.2%..68.0%) slows smoothly so user can appreciate both before returning to exact original speed at 68% for the Roland plotter
   const TRAMO_SLOWDOWN = 0.135;
-  const TRAMO_W_TOTAL = 1 + 0.42 * TRAMO_SLOWDOWN; // 1.0567
+  const AVILA_SLOWDOWN = 1.5;
+  const TRAMO_W_TOTAL = 1 + 0.42 * TRAMO_SLOWDOWN + 0.031 * AVILA_SLOWDOWN; // 1.1032
 
   const canonicalToRawRatio = useCallback((p: number): number => {
     const clampedP = Math.min(1, Math.max(0, p));
     let extra = 0;
+
+    // 1) Bridge travel tramo slowdown (0.20..0.64)
     if (clampedP > 0.2 && clampedP <= 0.22) {
       const t = (clampedP - 0.2) / 0.02;
-      extra = 0.02 * TRAMO_SLOWDOWN * (t * t * t - 0.5 * t * t * t * t);
+      extra += 0.02 * TRAMO_SLOWDOWN * (t * t * t - 0.5 * t * t * t * t);
     } else if (clampedP > 0.22 && clampedP <= 0.62) {
-      extra = 0.01 * TRAMO_SLOWDOWN + TRAMO_SLOWDOWN * (clampedP - 0.22);
+      extra += 0.01 * TRAMO_SLOWDOWN + TRAMO_SLOWDOWN * (clampedP - 0.22);
     } else if (clampedP > 0.62 && clampedP < 0.64) {
       const t = (clampedP - 0.62) / 0.02;
-      extra =
+      extra +=
         0.41 * TRAMO_SLOWDOWN +
         0.02 * TRAMO_SLOWDOWN * (t - (t * t * t - 0.5 * t * t * t * t));
     } else if (clampedP >= 0.64) {
-      extra = 0.42 * TRAMO_SLOWDOWN;
+      extra += 0.42 * TRAMO_SLOWDOWN;
     }
+
+    // 2) El Ávila + front-facing Priamito slowdown (0.642..0.680) -> returns to exact 1.0x original speed at 0.680 (start of Roland plotter transition)
+    if (clampedP > 0.642 && clampedP <= 0.649) {
+      const t = (clampedP - 0.642) / 0.007;
+      extra += 0.007 * AVILA_SLOWDOWN * (t * t * t - 0.5 * t * t * t * t);
+    } else if (clampedP > 0.649 && clampedP <= 0.673) {
+      extra += 0.0035 * AVILA_SLOWDOWN + AVILA_SLOWDOWN * (clampedP - 0.649);
+    } else if (clampedP > 0.673 && clampedP < 0.68) {
+      const t = (clampedP - 0.673) / 0.007;
+      extra +=
+        0.0275 * AVILA_SLOWDOWN +
+        0.007 * AVILA_SLOWDOWN * (t - (t * t * t - 0.5 * t * t * t * t));
+    } else if (clampedP >= 0.68) {
+      extra += 0.031 * AVILA_SLOWDOWN;
+    }
+
     return (clampedP + extra) / TRAMO_W_TOTAL;
   }, []);
 
@@ -361,7 +380,7 @@ export const ImmersiveExperience: React.FC<ImmersiveExperienceProps> = ({
       ref={trackRef}
       id="inicio"
       onMouseMove={handleMouseMove}
-      className="relative w-full h-[576vh] bg-white dark:bg-[#07090D] transition-colors duration-200"
+      className="relative w-full h-[597vh] bg-white dark:bg-[#07090D] transition-colors duration-200"
     >
       {/* Sticky Fullscreen 100vh Viewport */}
       <div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center">

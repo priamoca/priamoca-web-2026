@@ -9,7 +9,7 @@ export const COMPANY_INFO = {
   instagram: '@priamopublicidad',
   instagramUrl: 'https://instagram.com/priamopublicidad',
   website: 'www.priamopublicidad.com',
-  yearsExperience: '10+',
+  yearsExperience: '12+',
   yearFounded: '2014',
   whatsappNumber: '584126026814',
   whatsappDisplay: '+58 412-6026814',

@@ -24,12 +24,12 @@ export const SolutionsServices: React.FC<SolutionsServicesProps> = ({
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <ScrollReveal variant="clip" delay={0}>
             <div>
-              <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-[#0B7E32] dark:text-[#21E45B] uppercase mb-2">
+              <div className="flex items-center gap-2 text-xs tracking-widest text-[#0B7E32] dark:text-[#21E45B] uppercase mb-2">
                 <span>CATÁLOGO PRIAMO 2026</span>
                 <span>·</span>
                 <span>11 CATEGORÍAS INTEGRALES</span>
               </div>
-              <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#0F172A] dark:text-white uppercase leading-none">
+              <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#262D38] dark:text-white uppercase leading-none">
                 SOLUCIONES Y <br />
                 <span className="text-[#0B7E32] dark:text-[#21E45B] neon-text-glow">LÍNEAS DE PRODUCCIÓN</span>
               </h2>
@@ -61,16 +61,16 @@ export const SolutionsServices: React.FC<SolutionsServicesProps> = ({
                   className="p-4 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 cursor-pointer select-none"
                 >
                   <div className="flex items-start sm:items-center gap-4 sm:gap-6">
-                    <span className="font-mono text-lg sm:text-2xl font-black text-[#0B7E32]/85 dark:text-[#21E45B]/70 shrink-0">
+                    <span className="tabular-nums text-lg sm:text-2xl font-black text-[#0B7E32]/85 dark:text-[#21E45B]/70 shrink-0">
                       {service.index}
                     </span>
                     <div>
                       <div className="flex items-center gap-3">
-                        <h3 className="text-xl sm:text-2xl font-bold text-[#0F172A] dark:text-white">
+                        <h3 className="text-xl sm:text-2xl font-bold text-[#262D38] dark:text-white">
                           {service.title}
                         </h3>
                         {service.featured && (
-                          <span className="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-mono uppercase bg-[#ECFDF3] dark:bg-[#21E45B]/15 text-[#0B7E32] dark:text-[#21E45B] border border-[#0B7E32]/30 dark:border-[#21E45B]/30">
+                          <span className="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] uppercase bg-[#ECFDF3] dark:bg-[#21E45B]/15 text-[#0B7E32] dark:text-[#21E45B] border border-[#0B7E32]/30 dark:border-[#21E45B]/30">
                             Alta Escala
                           </span>
                         )}
@@ -87,7 +87,7 @@ export const SolutionsServices: React.FC<SolutionsServicesProps> = ({
                         e.stopPropagation();
                         onSelectServiceForQuote(service.title);
                       }}
-                      className="px-4 py-2 rounded-lg bg-[#21E45B] text-[#07090D] font-bold text-xs uppercase tracking-wider hover:bg-[#1ED153] dark:hover:bg-[#2bf56b] transition-all flex items-center gap-1.5 shadow-sm dark:shadow-md cursor-pointer"
+                      className="px-4 py-2 rounded-lg bg-[#21E45B] text-[#262D38] font-bold text-xs uppercase tracking-wider hover:bg-[#1ED153] dark:hover:bg-[#2bf56b] transition-all flex items-center gap-1.5 shadow-sm dark:shadow-md cursor-pointer"
                     >
                       <span>Cotizar</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
@@ -104,7 +104,7 @@ export const SolutionsServices: React.FC<SolutionsServicesProps> = ({
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 pt-3">
                       {/* Left: Key Applications */}
                       <div>
-                        <h4 className="text-xs font-mono uppercase text-[#0284C7] dark:text-[#00D2FF] tracking-wider mb-2">
+                        <h4 className="text-xs uppercase text-[#0284C7] dark:text-[#00D2FF] tracking-wider mb-2">
                           Aplicaciones Principales:
                         </h4>
                         <div className="flex flex-col gap-1.5">
@@ -119,14 +119,14 @@ export const SolutionsServices: React.FC<SolutionsServicesProps> = ({
 
                       {/* Right: Materials and Specs */}
                       <div>
-                        <h4 className="text-xs font-mono uppercase text-[#0B7E32] dark:text-[#21E45B] tracking-wider mb-2">
+                        <h4 className="text-xs uppercase text-[#0B7E32] dark:text-[#21E45B] tracking-wider mb-2">
                           Sustratos y Acabados Habituales:
                         </h4>
                         <div className="flex flex-wrap gap-1.5 mb-4">
                           {service.materials.map((mat, i) => (
                             <span
                               key={i}
-                              className="px-2.5 py-1 rounded-md bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-xs text-neutral-700 dark:text-neutral-300 font-mono"
+                              className="px-2.5 py-1 rounded-md bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-xs text-neutral-700 dark:text-neutral-300"
                             >
                               {mat}
                             </span>

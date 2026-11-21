@@ -8,6 +8,8 @@ import { HowWeWork } from './components/corporate/HowWeWork';
 import { TrustTrajectory } from './components/corporate/TrustTrajectory';
 import { Footer } from './components/corporate/Footer';
 import { ServiciosPage } from './pages/ServiciosPage';
+import { BlogPage } from './pages/BlogPage';
+import { PremiosTrayectoriaPage } from './pages/PremiosTrayectoriaPage';
 import { ContactoPage } from './pages/ContactoPage';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
 
@@ -115,7 +117,7 @@ export default function App() {
   // Route 1: Servicios Page (/servicios)
   if (currentPath === '/servicios') {
     return (
-      <div className="min-h-screen bg-white dark:bg-[#07090D] text-[#0F172A] dark:text-[#F5F7FA] transition-colors duration-200">
+      <div className="min-h-screen bg-white dark:bg-[#07090D] text-[#262D38] dark:text-[#F5F7FA] transition-colors duration-200">
         <Navigation
           currentPath="/servicios"
           scrollProgress={1}
@@ -137,10 +139,50 @@ export default function App() {
     );
   }
 
-  // Route 2: Contacto Page (/contacto)
+  // Route 2: Blog Page (/blog)
+  if (currentPath === '/blog') {
+    return (
+      <div className="min-h-screen bg-white dark:bg-[#07090D] text-[#262D38] dark:text-[#F5F7FA] transition-colors duration-200">
+        <Navigation
+          currentPath="/blog"
+          scrollProgress={1}
+          isImmersiveActive={false}
+          tiltActive={false}
+          onToggleTilt={handleToggleTilt}
+          onNavigate={navigate}
+          onNavigateSection={scrollToSection}
+          onResetToHome={handleResetToHome}
+        />
+        <BlogPage onNavigate={navigate} />
+        <WhatsAppFloatingButton visible={true} />
+      </div>
+    );
+  }
+
+  // Route 3: Premios y Trayectoria Page (/premios-y-trayectoria)
+  if (currentPath === '/premios-y-trayectoria') {
+    return (
+      <div className="min-h-screen bg-white dark:bg-[#07090D] text-[#262D38] dark:text-[#F5F7FA] transition-colors duration-200">
+        <Navigation
+          currentPath="/premios-y-trayectoria"
+          scrollProgress={1}
+          isImmersiveActive={false}
+          tiltActive={false}
+          onToggleTilt={handleToggleTilt}
+          onNavigate={navigate}
+          onNavigateSection={scrollToSection}
+          onResetToHome={handleResetToHome}
+        />
+        <PremiosTrayectoriaPage onNavigate={navigate} />
+        <WhatsAppFloatingButton visible={true} />
+      </div>
+    );
+  }
+
+  // Route 4: Contacto Page (/contacto)
   if (currentPath === '/contacto') {
     return (
-      <div className="min-h-screen bg-white dark:bg-[#07090D] text-[#0F172A] dark:text-[#F5F7FA] transition-colors duration-200">
+      <div className="min-h-screen bg-white dark:bg-[#07090D] text-[#262D38] dark:text-[#F5F7FA] transition-colors duration-200">
         <Navigation
           currentPath="/contacto"
           scrollProgress={1}
@@ -161,10 +203,10 @@ export default function App() {
     );
   }
 
-  // Route 3: Home Page (/) — Immersive Experience & Corporate Showcase
+  // Route 4: Home Page (/) — Immersive Experience & Corporate Showcase
   // Note: Servicios and Contacto are removed from Home as requested
   return (
-    <div className="min-h-screen bg-white dark:bg-[#07090D] text-[#0F172A] dark:text-[#F5F7FA] selection:bg-[#21E45B]/30 selection:text-[#0F172A] dark:selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-white dark:bg-[#07090D] text-[#262D38] dark:text-[#F5F7FA] selection:bg-[#21E45B]/30 selection:text-[#262D38] dark:selection:text-white transition-colors duration-200">
       {/* Sleek Top Navigation */}
       <Navigation
         currentPath="/"
@@ -191,7 +233,7 @@ export default function App() {
 
         {/* Corporate Sections (Unlocked following the immersive journey) */}
         <div className="relative z-20 bg-white dark:bg-[#07090D] transition-colors duration-200">
-          {/* Section A: Presentación de Priamo & Trayectoria 10+ */}
+          {/* Section A: Presentación de Priamo & Trayectoria 12+ */}
           <HeroIntroduction
             onQuoteClick={() => navigate('/contacto')}
             onExploreProjects={() => scrollToSection('proyectos')}
@@ -220,6 +262,10 @@ export default function App() {
         onNavigateSection={(idOrPath) => {
           if (idOrPath === 'servicios') {
             navigate('/servicios');
+          } else if (idOrPath === 'blog') {
+            navigate('/blog');
+          } else if (idOrPath === 'premios-y-trayectoria') {
+            navigate('/premios-y-trayectoria');
           } else if (idOrPath === 'contacto') {
             navigate('/contacto');
           } else {

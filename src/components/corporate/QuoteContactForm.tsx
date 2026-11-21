@@ -112,12 +112,12 @@ ${formData.description}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <ScrollReveal variant="clip" delay={0}>
             <div>
-              <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-[#0B7E32] dark:text-[#21E45B] uppercase mb-2">
+              <div className="flex items-center gap-2 text-xs tracking-widest text-[#0B7E32] dark:text-[#21E45B] uppercase mb-2">
                 <span>SOLICITUD DE COTIZACIÓN & CONTACTO</span>
                 <span>·</span>
                 <span>ATENCIÓN DIRECTA</span>
               </div>
-              <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#0F172A] dark:text-white uppercase leading-none">
+              <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#262D38] dark:text-white uppercase leading-none">
                 HABLEMOS DE TU <br />
                 <span className="text-[#0B7E32] dark:text-[#21E45B] neon-text-glow">PRÓXIMO PROYECTO</span>
               </h2>
@@ -138,7 +138,7 @@ ${formData.description}
               {/* Row 1: Name and Company */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
                     Nombre y Apellido *
                   </label>
                   <input
@@ -146,7 +146,7 @@ ${formData.description}
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="Ej. Carlos Mendoza"
-                    className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border text-sm text-[#0F172A] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors ${
+                    className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border text-sm text-[#262D38] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors ${
                       errors.fullName ? 'border-red-500' : 'border-neutral-300 dark:border-white/10'
                     }`}
                   />
@@ -154,7 +154,7 @@ ${formData.description}
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
                     Empresa o Marca
                   </label>
                   <input
@@ -162,7 +162,7 @@ ${formData.description}
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     placeholder="Ej. Thundernet C.A."
-                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border border-neutral-300 dark:border-white/10 text-sm text-[#0F172A] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border border-neutral-300 dark:border-white/10 text-sm text-[#262D38] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors"
                   />
                 </div>
               </div>
@@ -170,7 +170,7 @@ ${formData.description}
               {/* Row 2: Email and Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
                     Correo Electrónico *
                   </label>
                   <input
@@ -178,7 +178,7 @@ ${formData.description}
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="ejemplo@empresa.com"
-                    className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border text-sm text-[#0F172A] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors ${
+                    className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border text-sm text-[#262D38] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors ${
                       errors.email ? 'border-red-500' : 'border-neutral-300 dark:border-white/10'
                     }`}
                   />
@@ -186,7 +186,7 @@ ${formData.description}
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
                     Teléfono / WhatsApp *
                   </label>
                   <input
@@ -194,7 +194,7 @@ ${formData.description}
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+58 412 1234567"
-                    className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border text-sm text-[#0F172A] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors ${
+                    className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border text-sm text-[#262D38] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors ${
                       errors.phone ? 'border-red-500' : 'border-neutral-300 dark:border-white/10'
                     }`}
                   />
@@ -204,16 +204,16 @@ ${formData.description}
 
               {/* Row 3: Service Selector */}
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                <label className="block text-xs uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
                   Línea de Servicio de Interés
                 </label>
                 <select
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border border-neutral-300 dark:border-white/10 text-sm text-[#0F172A] dark:text-white focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors cursor-pointer"
+                  className="w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border border-neutral-300 dark:border-white/10 text-sm text-[#262D38] dark:text-white focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors cursor-pointer"
                 >
                   {SERVICES.map((srv) => (
-                    <option key={srv.id} value={srv.title} className="bg-white dark:bg-[#07090D] text-[#0F172A] dark:text-white">
+                    <option key={srv.id} value={srv.title} className="bg-white dark:bg-[#07090D] text-[#262D38] dark:text-white">
                       {srv.index}. {srv.title}
                     </option>
                   ))}
@@ -223,7 +223,7 @@ ${formData.description}
               {/* Row 4: Dimensions & Location */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
                     Medidas y Cantidad (aprox)
                   </label>
                   <input
@@ -231,12 +231,12 @@ ${formData.description}
                     value={formData.dimensions}
                     onChange={(e) => setFormData({ ...formData, dimensions: e.target.value })}
                     placeholder="Ej. 6 x 3 metros, 2 unidades"
-                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border border-neutral-300 dark:border-white/10 text-sm text-[#0F172A] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border border-neutral-300 dark:border-white/10 text-sm text-[#262D38] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
                     Ubicación / Ciudad
                   </label>
                   <input
@@ -244,7 +244,7 @@ ${formData.description}
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                     placeholder="Ej. Caracas, Las Mercedes"
-                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border border-neutral-300 dark:border-white/10 text-sm text-[#0F172A] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border border-neutral-300 dark:border-white/10 text-sm text-[#262D38] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors"
                   />
                 </div>
               </div>
@@ -252,7 +252,7 @@ ${formData.description}
               {/* Row 5: Deadline & Attachments Note */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                  <label className="block text-xs uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
                     Fecha Requerida de Entrega
                   </label>
                   <input
@@ -260,7 +260,7 @@ ${formData.description}
                     value={formData.deadline}
                     onChange={(e) => setFormData({ ...formData, deadline: e.target.value })}
                     placeholder="Ej. 15 de Diciembre 2026"
-                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border border-neutral-300 dark:border-white/10 text-sm text-[#0F172A] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border border-neutral-300 dark:border-white/10 text-sm text-[#262D38] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors"
                   />
                 </div>
 
@@ -274,7 +274,7 @@ ${formData.description}
 
               {/* Description */}
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                <label className="block text-xs uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
                   Descripción del Proyecto *
                 </label>
                 <textarea
@@ -282,7 +282,7 @@ ${formData.description}
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   placeholder="Detalles sobre superficie, tipo de acabado deseado, si requiere instalación en sitio, o si ya cuentas con arte final..."
-                  className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border text-sm text-[#0F172A] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors ${
+                  className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#07090D] border text-sm text-[#262D38] dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-[#0B7E32] dark:focus:border-[#21E45B] transition-colors ${
                     errors.description ? 'border-red-500' : 'border-neutral-300 dark:border-white/10'
                   }`}
                 />
@@ -293,7 +293,7 @@ ${formData.description}
               <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
                 <button
                   type="submit"
-                  className="w-full sm:flex-1 py-3.5 px-6 rounded-lg bg-[#21E45B] text-[#07090D] font-black uppercase tracking-wider text-sm hover:bg-[#1ED153] dark:hover:bg-[#2bf56b] shadow-[0_4px_16px_rgba(33,228,91,0.3)] dark:shadow-[0_0_20px_rgba(33,228,91,0.35)] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full sm:flex-1 py-3.5 px-6 rounded-lg bg-[#21E45B] text-[#262D38] font-black uppercase tracking-wider text-sm hover:bg-[#1ED153] dark:hover:bg-[#2bf56b] shadow-[0_4px_16px_rgba(33,228,91,0.3)] dark:shadow-[0_0_20px_rgba(33,228,91,0.35)] transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Send className="w-4 h-4" />
                   <span>Enviar por Correo Formal</span>
@@ -319,7 +319,7 @@ ${formData.description}
               </div>
 
               {copied && (
-                <p className="text-xs text-[#0B7E32] dark:text-[#21E45B] text-center font-mono">
+                <p className="text-xs text-[#0B7E32] dark:text-[#21E45B] text-center">
                   ✓ Resumen técnico copiado al portapapeles con éxito.
                 </p>
               )}
@@ -332,49 +332,49 @@ ${formData.description}
             {/* Corporate Sheet */}
             <ScrollReveal variant="scale" delay={160}>
               <div className="p-8 rounded-2xl bg-[#F8FAFC] dark:bg-[#0D1522] border border-neutral-200 dark:border-white/10 relative overflow-hidden shadow-sm dark:shadow-none">
-              <span className="text-xs font-mono text-[#0B7E32] dark:text-[#21E45B] uppercase tracking-wider block mb-2">
+              <span className="text-xs text-[#0B7E32] dark:text-[#21E45B] uppercase tracking-wider block mb-2">
                 DATOS CORPORATIVOS
               </span>
-              <h3 className="text-2xl font-black text-[#0F172A] dark:text-white uppercase tracking-tight mb-4">
+              <h3 className="text-2xl font-black text-[#262D38] dark:text-white uppercase tracking-tight mb-4">
                 {COMPANY_INFO.name}
               </h3>
 
               <div className="flex flex-col gap-4 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-neutral-500 w-16">RIF:</span>
-                  <span className="font-mono text-[#0F172A] dark:text-white font-bold">{COMPANY_INFO.rif}</span>
+                  <span className="text-neutral-500 w-20">RIF:</span>
+                  <span className="text-[#262D38] dark:text-white font-bold">{COMPANY_INFO.rif}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-neutral-500 w-16">WHATSAPP:</span>
+                  <span className="text-neutral-500 w-20">WHATSAPP:</span>
                   <a
                     href={COMPANY_INFO.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#0E8A38] dark:text-[#25D366] hover:underline font-mono font-bold"
+                    className="text-[#0E8A38] dark:text-[#25D366] hover:underline font-bold"
                   >
                     {COMPANY_INFO.whatsappDisplay}
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-neutral-500 w-16">EMAIL:</span>
-                  <a href={`mailto:${COMPANY_INFO.email}`} className="text-[#0B7E32] dark:text-[#21E45B] hover:underline font-mono">
+                  <span className="text-neutral-500 w-20">EMAIL:</span>
+                  <a href={`mailto:${COMPANY_INFO.email}`} className="text-[#0B7E32] dark:text-[#21E45B] hover:underline">
                     {COMPANY_INFO.email}
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-neutral-500 w-16">INSTAGRAM:</span>
+                  <span className="text-neutral-500 w-20">INSTAGRAM:</span>
                   <a
                     href={COMPANY_INFO.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#0F172A] dark:text-white hover:text-[#0B7E32] dark:hover:text-[#21E45B] transition-colors font-mono"
+                    className="text-[#262D38] dark:text-white hover:text-[#0B7E32] dark:hover:text-[#21E45B] transition-colors"
                   >
                     {COMPANY_INFO.instagram}
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-neutral-500 w-16">WEB:</span>
-                  <span className="font-mono text-neutral-700 dark:text-neutral-300">{COMPANY_INFO.website}</span>
+                  <span className="text-neutral-500 w-20">WEB:</span>
+                  <span className="text-neutral-700 dark:text-neutral-300">{COMPANY_INFO.website}</span>
                 </div>
               </div>
             </div>

@@ -42,7 +42,7 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#07090D] text-[#0F172A] dark:text-[#F5F7FA] pt-24 selection:bg-[#21E45B]/30 selection:text-[#0F172A] dark:selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-white dark:bg-[#07090D] text-[#262D38] dark:text-[#F5F7FA] pt-24 selection:bg-[#21E45B]/30 selection:text-[#262D38] dark:selection:text-white transition-colors duration-200">
       {/* Header / Hero Section */}
       <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-neutral-200 dark:border-white/10 bg-gradient-to-b from-[#F0FDF4]/60 via-white to-white dark:from-[#0B1524] dark:via-[#07090D] dark:to-[#07090D] overflow-hidden">
         {/* Ambient atmospheric glow */}
@@ -51,7 +51,7 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-neutral-500 dark:text-neutral-400 uppercase mb-6">
+          <div className="flex items-center gap-2 text-xs tracking-widest text-neutral-500 dark:text-neutral-400 uppercase mb-6">
             <button
               onClick={() => onNavigate('/')}
               className="hover:text-[#0B7E32] dark:hover:text-[#21E45B] transition-colors cursor-pointer"
@@ -67,11 +67,11 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
             <ScrollReveal variant="clip" delay={0} className="lg:col-span-8">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ECFDF3] dark:bg-[#21E45B]/10 border border-[#0B7E32]/25 dark:border-[#21E45B]/30 text-[#0B7E32] dark:text-[#21E45B] text-xs font-mono uppercase mb-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ECFDF3] dark:bg-[#21E45B]/10 border border-[#0B7E32]/25 dark:border-[#21E45B]/30 text-[#0B7E32] dark:text-[#21E45B] text-xs uppercase mb-4">
                   <MessageSquare className="w-3.5 h-3.5" />
                   <span>Atención Técnica Especializada</span>
                 </div>
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0F172A] dark:text-white leading-[1.08]">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#262D38] dark:text-white leading-[1.08]">
                   COTIZA TU PROYECTO <br />
                   <span className="text-[#0B7E32] dark:text-[#21E45B] neon-text-glow">PUBLICITARIO CON PRIAMO</span>
                 </h1>
@@ -85,15 +85,15 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({
               <div className="p-4 rounded-xl bg-[#F8FAFC] dark:bg-[#0D121D] border border-neutral-200 dark:border-white/10 flex items-center gap-3 shadow-xs dark:shadow-none">
                 <Clock className="w-5 h-5 text-[#0B7E32] dark:text-[#21E45B] shrink-0" />
                 <div className="text-xs">
-                  <span className="text-[#0F172A] dark:text-white font-bold block uppercase">Tiempo de Respuesta</span>
-                  <span className="text-neutral-600 dark:text-neutral-400 font-mono">Menos de 24 horas hábiles</span>
+                  <span className="text-[#262D38] dark:text-white font-bold block uppercase">Tiempo de Respuesta</span>
+                  <span className="text-neutral-600 dark:text-neutral-400">Menos de 24 horas hábiles</span>
                 </div>
               </div>
               <div className="p-4 rounded-xl bg-[#F8FAFC] dark:bg-[#0D121D] border border-neutral-200 dark:border-white/10 flex items-center gap-3 shadow-xs dark:shadow-none">
                 <ShieldCheck className="w-5 h-5 text-[#0284C7] dark:text-[#00D2FF] shrink-0" />
                 <div className="text-xs">
-                  <span className="text-[#0F172A] dark:text-white font-bold block uppercase">Asesoría de Producción</span>
-                  <span className="text-neutral-600 dark:text-neutral-400 font-mono">Levantamiento y planos en sitio</span>
+                  <span className="text-[#262D38] dark:text-white font-bold block uppercase">Asesoría de Producción</span>
+                  <span className="text-neutral-600 dark:text-neutral-400">Levantamiento y planos en sitio</span>
                 </div>
               </div>
             </ScrollReveal>
@@ -110,8 +110,8 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="overflow-hidden">
-                  <span className="text-[10px] font-mono text-neutral-500 dark:text-neutral-400 uppercase block">Correo Oficial</span>
-                  <span className="text-xs font-bold text-[#0F172A] dark:text-white truncate block">{COMPANY_INFO.email}</span>
+                  <span className="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase block">Correo Oficial</span>
+                  <span className="text-xs font-bold text-[#262D38] dark:text-white truncate block">{COMPANY_INFO.email}</span>
                 </div>
               </a>
             </ScrollReveal>
@@ -127,8 +127,8 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({
                   <Instagram className="w-5 h-5" />
                 </div>
                 <div className="overflow-hidden">
-                  <span className="text-[10px] font-mono text-neutral-500 dark:text-neutral-400 uppercase block">Instagram</span>
-                  <span className="text-xs font-bold text-[#0F172A] dark:text-white truncate block">{COMPANY_INFO.instagram}</span>
+                  <span className="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase block">Instagram</span>
+                  <span className="text-xs font-bold text-[#262D38] dark:text-white truncate block">{COMPANY_INFO.instagram}</span>
                 </div>
               </a>
             </ScrollReveal>
@@ -139,8 +139,8 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div className="overflow-hidden">
-                  <span className="text-[10px] font-mono text-neutral-500 dark:text-neutral-400 uppercase block">Ubicación</span>
-                  <span className="text-xs font-bold text-[#0F172A] dark:text-white block">Caracas, Venezuela</span>
+                  <span className="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase block">Ubicación</span>
+                  <span className="text-xs font-bold text-[#262D38] dark:text-white block">Caracas, Venezuela</span>
                 </div>
               </div>
             </ScrollReveal>
@@ -157,8 +157,8 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 <div className="overflow-hidden">
-                  <span className="text-[10px] font-mono text-neutral-500 dark:text-neutral-400 uppercase block">WhatsApp Directo</span>
-                  <span className="text-xs font-bold text-[#0F172A] dark:text-white group-hover:text-[#0E8A38] dark:group-hover:text-[#25D366] transition-colors block">
+                  <span className="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase block">WhatsApp Directo</span>
+                  <span className="text-xs font-bold text-[#262D38] dark:text-white group-hover:text-[#0E8A38] dark:group-hover:text-[#25D366] transition-colors block">
                     +58 412-6026814
                   </span>
                 </div>
@@ -184,6 +184,12 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({
             window.scrollTo({ top: 0, behavior: 'smooth' });
           } else if (idOrPath === 'servicios') {
             onNavigate('/servicios');
+          } else if (idOrPath === 'blog') {
+            onNavigate('/blog');
+          } else if (idOrPath === 'premios-y-trayectoria') {
+            onNavigate('/premios-y-trayectoria');
+          } else if (idOrPath === 'inicio') {
+            onNavigate('/');
           } else {
             onNavigate(`/#${idOrPath}`);
           }

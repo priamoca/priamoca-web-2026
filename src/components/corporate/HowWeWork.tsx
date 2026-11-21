@@ -14,12 +14,12 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onStartProject }) => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <ScrollReveal variant="clip" delay={0}>
-            <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-[#0B7E32] dark:text-[#21E45B] uppercase mb-2">
+            <div className="flex items-center gap-2 text-xs tracking-widest text-[#0B7E32] dark:text-[#21E45B] uppercase mb-2">
               <span>DEL REQUERIMIENTO A LA ENTREGA</span>
               <span>·</span>
               <span>PROCESO METÓDICO</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#0F172A] dark:text-white uppercase leading-none">
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#262D38] dark:text-white uppercase leading-none">
               UN PROYECTO CLARO, <br />
               <span className="text-[#0B7E32] dark:text-[#21E45B] neon-text-glow">DESDE EL INICIO</span>
             </h2>
@@ -40,13 +40,13 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onStartProject }) => {
               >
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-3xl font-black text-[#0B7E32] dark:text-[#21E45B] group-hover:scale-110 transition-transform block">
+                    <span className="tabular-nums text-3xl font-black text-[#0B7E32] dark:text-[#21E45B] group-hover:scale-110 transition-transform block">
                       {stage.number}
                     </span>
                     <span className="w-2.5 h-2.5 rounded-full bg-neutral-300 dark:bg-white/20 group-hover:bg-[#21E45B] transition-colors" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#0F172A] dark:text-white mb-3 group-hover:text-[#0B7E32] dark:group-hover:text-[#21E45B] transition-colors">
+                  <h3 className="text-xl font-bold text-[#262D38] dark:text-white mb-3 group-hover:text-[#0B7E32] dark:group-hover:text-[#21E45B] transition-colors">
                     {stage.title}
                   </h3>
 
@@ -57,7 +57,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onStartProject }) => {
 
                 {/* Deliverable badge */}
                 <div className="pt-4 border-t border-neutral-200 dark:border-white/5 relative z-10">
-                  <span className="text-[10px] font-mono text-[#0284C7] dark:text-[#00D2FF] uppercase tracking-wider block mb-1">
+                  <span className="text-[10px] text-[#0284C7] dark:text-[#00D2FF] uppercase tracking-wider block mb-1">
                     Entregable de la etapa:
                   </span>
                   <span className="text-xs text-neutral-700 dark:text-neutral-300 font-medium">
@@ -76,7 +76,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onStartProject }) => {
         <ScrollReveal variant="up" delay={100}>
           <div className="mt-14 p-8 rounded-2xl bg-gradient-to-r from-[#F0FDF4] via-[#F8FAFC] to-[#EFF6FF] dark:from-[#102744] dark:via-[#0D1522] dark:to-[#07182B] border border-neutral-200 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm dark:shadow-none">
             <div>
-              <h4 className="text-xl font-bold text-[#0F172A] dark:text-white mb-1">
+              <h4 className="text-xl font-bold text-[#262D38] dark:text-white mb-1">
                 ¿Listo para dar el paso de la idea al plano?
               </h4>
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
@@ -85,7 +85,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onStartProject }) => {
             </div>
             <button
               onClick={onStartProject}
-              className="px-6 py-3.5 rounded-lg bg-[#21E45B] text-[#07090D] font-bold text-xs uppercase tracking-wider hover:bg-[#1ED153] dark:hover:bg-[#2bf56b] transition-all flex items-center gap-2 whitespace-nowrap shadow-[0_4px_14px_rgba(33,228,91,0.28)] dark:shadow-[0_0_20px_rgba(33,228,91,0.3)] shrink-0 cursor-pointer"
+              className="px-6 py-3.5 rounded-lg bg-[#21E45B] text-[#262D38] font-bold text-xs uppercase tracking-wider hover:bg-[#1ED153] dark:hover:bg-[#2bf56b] transition-all flex items-center gap-2 whitespace-nowrap shadow-[0_4px_14px_rgba(33,228,91,0.28)] dark:shadow-[0_0_20px_rgba(33,228,91,0.3)] shrink-0 cursor-pointer"
             >
               <span>Iniciemos tu próximo proyecto</span>
               <ArrowRight className="w-4 h-4" />
