@@ -1,6 +1,15 @@
 import { useState, useEffect, useCallback } from 'react';
 
-export type AppRoute = '/' | '/servicios' | '/blog' | '/premios-y-trayectoria' | '/contacto';
+export type AppRoute =
+  | '/'
+  | '/servicios'
+  | '/blog'
+  | '/premios-y-trayectoria'
+  | '/contacto'
+  | '/info'
+  | '/info/impresion'
+  | '/info/experiencias'
+  | '/info/imagen-de-marca';
 
 export interface RouteState {
   path: AppRoute;
@@ -19,6 +28,10 @@ function parseLocation(): RouteState {
   else if (rawPath === '/blog') path = '/blog';
   else if (rawPath === '/premios-y-trayectoria' || rawPath === '/premios') path = '/premios-y-trayectoria';
   else if (rawPath === '/contacto') path = '/contacto';
+  else if (rawPath === '/info') path = '/info';
+  else if (rawPath === '/info/impresion') path = '/info/impresion';
+  else if (rawPath === '/info/experiencias') path = '/info/experiencias';
+  else if (rawPath === '/info/imagen-de-marca') path = '/info/imagen-de-marca';
 
   const searchParams = new URLSearchParams(window.location.search);
   const params: Record<string, string> = {};

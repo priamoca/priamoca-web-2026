@@ -2,4 +2,8 @@
 /blog                    /index.html  200
 /premios-y-trayectoria   /index.html  200
 /contacto                /index.html  200
+/info                    /index.html  200
+/info/impresion          /index.html  200
+/info/experiencias       /index.html  200
+/info/imagen-de-marca    /index.html  200
 /*                       /index.html  200

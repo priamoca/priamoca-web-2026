@@ -12,6 +12,8 @@ import { BlogPage } from './pages/BlogPage';
 import { PremiosTrayectoriaPage } from './pages/PremiosTrayectoriaPage';
 import { ContactoPage } from './pages/ContactoPage';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
+import { InfoRouterShell } from './components/info/InfoRouterShell';
+import { AiStudioPreviewAccess } from './components/info/AiStudioPreviewAccess';
 
 export default function App() {
   const { currentPath, navigate, params, hash } = useRouter();
@@ -113,6 +115,22 @@ export default function App() {
     window.addEventListener('scroll', updateActiveSection, { passive: true });
     return () => window.removeEventListener('scroll', updateActiveSection);
   }, [currentPath, isProgrammaticNavigating]);
+
+  // Route 0: Public Editorial Landing (/info & /info/*)
+  if (
+    currentPath === '/info' ||
+    currentPath === '/info/impresion' ||
+    currentPath === '/info/experiencias' ||
+    currentPath === '/info/imagen-de-marca'
+  ) {
+    return (
+      <>
+        <InfoRouterShell currentPath={currentPath} onNavigate={navigate} />
+        <WhatsAppFloatingButton visible={currentPath !== '/info'} />
+        <AiStudioPreviewAccess currentPath={currentPath} onNavigate={navigate} />
+      </>
+    );
+  }
 
   // Route 1: Servicios Page (/servicios)
   if (currentPath === '/servicios') {
@@ -276,6 +294,9 @@ export default function App() {
 
       {/* Floating WhatsApp Button: Active everywhere EXCEPT during the 3D immersive animation */}
       <WhatsAppFloatingButton visible={scrollProgress >= 0.98} />
+
+      {/* Exclusive AI Studio / localhost quick preview bar to jump directly to /info */}
+      <AiStudioPreviewAccess currentPath={currentPath} onNavigate={navigate} />
     </div>
   );
 }
