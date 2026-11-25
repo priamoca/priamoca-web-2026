@@ -35,7 +35,7 @@ Este proyecto está configurado como una **SPA estática (Vite + React + TypeScr
 ### 3. Qué comprobar en la URL `.pages.dev`
 - Carga inicial en modo claro y funcionamiento del switch Claro/Oscuro.
 - Escena inicial con la laptop, recorrido 3D de Priamito, plotter Roland TrueVIS y cierre.
-- Navegación directa y recarga (`F5`) en `/servicios` y `/contacto` (garantizada por `public/_redirects`).
+- Navegación directa y recarga (`F5`) en `/servicios`, `/contacto`, `/info` y sus subrutas (garantizada automáticamente por el modo SPA de Cloudflare Pages al no existir `404.html` ni reglas `_redirects` hacia `/index.html`).
 - Visualización del favicon oficial en la pestaña y en móvil.
 - Botón flotante de WhatsApp y botones de cotización (`mailto:` / `wa.me`).
 
